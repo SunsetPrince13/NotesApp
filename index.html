@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes-app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+        .copy_text{
+            color: #fff;
+            background-color: purple;
+            border: none;
+            border-radius: 6px;
+            position: absolute;
+            right: 23px;
+        }
+
+        .functionalities{
+            background: transparent;
+            border: none;
+            color: #111;
+            height: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            float: left;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="taskbar">
+            <ul>
+                <li id="file">File</li>
+                <li id="home">Home</li>
+                <li id="insert">Insert</li>
+                <li id="help">Help</li>
+                <button class="functionalities" id="undo"><i class="fa fa-solid fa-rotate-left"></i></button>
+                <button class="functionalities" id="redo"><i class="fa fa-solid fa-rotate-right"></i></button>
+            </ul>
+            <div class="taskbar_liner"></div>
+        </div>
+        <div class="functions_panel">
+            
+            <div class="functions_content">
+                <button class="copy_text"><i class="fa fa-regular fa-clipboard"></i><br>Copy text</button>
+            <div class="font_features">
+                <select class="margin_select">
+                    <option value="normal">Normal</option>
+                    <option value="narrow">Narrow</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="wide">Wide</option>
+                </select>
+            </div>
+                <div class="font_features" id="font_manipulation">
+                    <section>
+                        <select style="width: 200px;" class="font_family">
+                            <option value="sans-serif" style="font-family: sans-serif;" selected>sans-serif</option>
+                            <option value="Georgia" style="font-family: Georgia;">Georgia</option>
+                            <option value="Courier" style="font-family: Courier;">Courier</option>
+                            <option value="monospace" style="font-family: monospace;">monospace</option>
+                            <option value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Arial</option>
+                            <option value="Verdana" style="font-family: Verdana;">Verdana</option>
+                            <option value="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Trebuchet MS</option>
+                            <option value="'SUSE', sans-serif" style="font-family: 'SUSE', sans-serif;">SUSE</option>
+                        </select>  
+                        <select class="font_size">
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16" selected>16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="36">36</option>
+                            <option value="48">48</option>
+                            <option value="72">72</option>
+                        </select>
+                    </section>
+                    
+                    <div class="justify_buttons">
+                        <button id="left"><i class="fa fa-align-left"></i></button>
+                        <button id="center"><i class="fa fa-align-center"></i></button>
+                        <button id="right"><i class="fa fa-align-right"></i></button>
+                        <button class="font_content" id="bold" style="font-weight: bolder;">B</button>
+                        <button class="font_content" id="underline" style="text-decoration: underline;">U</button>
+                        <button class="font_content" id="italize"><i style="font-family: Georgia, 'Times New Roman', Times, serif;">I</i></button>
+                    </div>
+
+            </div>
+                
+        <div class="font_features">
+            <button class="addNote">&plus;</button>
+        </div>
+        <div class="font_features" style="float: left;">
+            <button class="textToSpeech" style="width: 40px; height: 50px; background-color: blue; color: #fff; border: none; border-radius: 12px;"><i class="fa fa-solid fa-microphone"></i></button>
+            </div>
+        </div>
+          
+        </div>
+
+        
+    </div>
+    <footer>
+            <div class="wordCount">
+                <h4>Word Count:</h4>
+                <h5>0</h5>
+            </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
